@@ -28,6 +28,6 @@ resource "aws_security_group" "demo-sg" {
   }
 
   tags = {
-    Name = "security_group_sg"
+    Name = "security_group_tag"
   }
 }
