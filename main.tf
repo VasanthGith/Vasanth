@@ -1,7 +1,6 @@
 provider "aws" {
   region = "us-east-1"
 }
-
 resource "aws_instance" "test_instance" {
     ami = "ami-022e1a32d3f742bd8"
     instance_type = "t2.micro"
@@ -16,7 +15,7 @@ resource "aws_security_group" "demo-sg" {
   ingress {
     from_port        = 22
     to_port          = 22
-    protocol         = tcp
+    protocol         = "tcp"
     cidr_blocks      = ["0.0.0.0/0"]
   }
 
