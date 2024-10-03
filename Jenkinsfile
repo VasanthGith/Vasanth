@@ -4,11 +4,14 @@ pipeline {
           label 'maven'
     }
     }
+    environment {
+        PATH = "/opt/apache-maven-3.9.9/bin:$PATH"
+    }
 
     stages {
-        stage('Git Clone') {
+        stage('Build stage') {
             steps {
-                git branch: 'main', url: 'https://github.com/VasanthGith/Vasanth.git'
+                sh 'mvn clean deploy'
             }
         }
     }
