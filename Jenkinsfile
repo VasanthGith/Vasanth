@@ -19,7 +19,7 @@ environment {
         stage("test"){
             steps{
                 echo "----------- unit test started ----------"
-                sh 'mvn surefire-report:report'
+                sh '/opt/apache-maven-3.9.9/bin/mvn surefire-report:report'
                  echo "----------- unit test Complted ----------"
             }
         }
