@@ -74,5 +74,10 @@ environment {
                 }
             }
         }
+        stage ("Deploy K8s services"){
+          steps{
+            sh './deploy.sh'
+          }
+        }
 }
 }
