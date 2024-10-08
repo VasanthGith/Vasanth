@@ -74,9 +74,9 @@ environment {
                 }
             }
         }
-        stage ("Deploy K8s services"){
+        stage ("Deploy K8s services using Helm"){
           steps{
-            sh 'sh deploy.sh'
+            sh 'helm install ttrend-v1 ttrend-0.1.0.tgz'
           }
         }
 }
